@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>delete task</h1>
+    <p>Are you sure you want to delete {{item}}?</p>
+
+    <form class="delete" action="" method="POST">
+      {% csrf_token %}
+      <input type="submit" name="confirm">
+    </form>
+    <a href="{% url 'todo:todo' %}">cancel</a>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'polls/page.html'%}
+
+ {% block content%}
+  <body>
+
+
+<ul class="questions">
+    <h1>{{ question.question_text }}</h1>
+{% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }} <span> -- {{ choice.vote }} vote{{ choice.vote|pluralize }}</span></li>
+{% endfor %}
+<a class="btn-primary btn-sm" href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<a class="btn btn-info" href="{% url 'polls:poll page'%}">back to question</a>
+
+</ul>
+  {% endblock %}
+  </body>
+</html>

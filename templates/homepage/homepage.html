@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" href="{% static 'homepage.css' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<main>
+  <aside class="asidelist">
+    <ul class="items">
+      <li><a href="" class="asideAnchor">  Projects</a></li>
+      <li><a href="{% url 'polls:poll page' %}" class="asideAnchor">Poll</a></li>
+      <li><a href="{% url 'todo:todo' %}" class="asideAnchor">ToDo</a></li>
+      <li><a href="{% url 'blog:blog home' %}" class="asideAnchor">Blog</a></li>
+      <li><a href="" class="asideAnchor">E commerce</a></li>
+      <li><a href="" class="asideAnchor">Social Media</a></li>
+    </ul>
+  </aside>
+  <section>
+    <input type="checkbox" id="myInput">
+    <label for="myInput">
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar bottom"></span>
+    </label>
+
+    <div class="content">
+      <h1>Everything I've built</h1>
+    </div>
+  </section>
+</main>

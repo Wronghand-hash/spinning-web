@@ -1,0 +1,25 @@
+{% extends 'polls/page.html' %}
+<!DOCTYPE html>
+{% load static %}
+
+  <body>
+    {% block content %}
+    <div class="questions">
+
+
+        <h1>{{ question.question_text }}</h1>
+      {% for choice in question.choice_set.all %}
+      {% if error_message %}<p ><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+          {% csrf_token %}
+        <form class="form" action="{% url 'polls:vote' question.id %}" method="post">
+          <input type="radio" name="choice" id="choice" value="{{ choice.id }}">
+          <label class="jumbotron" for="choice{{ forloop.counter }}" >{{ choice.choice_text }}</label>
+        {% endfor %}
+        <input class="btn btn-success" type="submit" name="vote_submit" value="vote">
+    </form>
+      </div>
+    {% endblock %}
+  </body>
+</html>

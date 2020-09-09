@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+    <title></title>
+  </head>
+  <body class="page">
+
+    <nav class="topnav">
+    <a class="nav-homepage" href="{% url 'homepage' %}">homepage</a>
+  </nav>
+  <br><br>
+
+    <div class="wrapper">
+          {% block content %}
+          {% endblock %}
+   </div>
+<div class="questions">
+  {% for question in latest_question_list %}
+    <h1>{{ question.question_text }}</h1>
+    <a class="shortcuts" href="{% url 'polls:detail' question.id %}">vote now</a>
+    <a class="shortcuts" href="{% url 'polls:result' question.id %}">results</a>
+  {% endfor %}
+</div>
+
+  </body>
+</html>
