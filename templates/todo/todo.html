@@ -3,6 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/6d5cea7546.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'todo.css' %}">
@@ -22,7 +23,8 @@
             <a id="task">
               {% for task in tasks %}
                 {% if task.complete == True %}
-                  <span>{{ task }}</span>
+                  <span>{{ task }} <i id="delete" class="fas fa-dumpster-fire text-end"></i></span>
+
                 {% endif %}
               {% endfor %}
             </a>

@@ -1,15 +1,14 @@
 body {
   max-width: 100%;
-  position: relative;
-  top: 60px;
+  position: absolute;
   background: url("life.png") no-repeat fixed;
   background-size: 100%;
 }
 
 .container {
-  max-width: 600px;
+  width: 500px;
   position: relative;
-  right: 29%;
+  left: 0px;
 }
 
 input[type=text],
@@ -39,4 +38,16 @@ input[type=text]:focus {
   padding: 20px;
   margin: 4px;
   height: 10px;
+}
+
+#delete {
+  font-size: 20px;
+  align-items: flex-end;
+  float: right;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#task span {
+  border-bottom: 1px solid white;
 }
