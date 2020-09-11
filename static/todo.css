@@ -10,6 +10,7 @@ body {
   width: 550px;
   position: relative;
   left: 0px;
+  margin-top: 20%;
 }
 
 .search {
@@ -72,10 +73,12 @@ input[type=text]:focus {
 }
 
 #task span {
-  border-bottom: 1px solid white;
+  color: #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
 }
 
 #header h1 {
+    color: #d6d6d6;
     animation-name: fadein;
     -webkit-animation: fadein 2s;
        -moz-animation: fadein 2s;

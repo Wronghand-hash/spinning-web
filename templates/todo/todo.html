@@ -19,12 +19,13 @@
           </form>
         </header>
 
-        <ul id="list" class="list-group mx-auto text-light">
+        <ul id="list" class="list-group mx-auto">
           <li id="todos" class="list-group-item d-flex-row justify-content-between align-item-start">
             <a id="task">
               {% for task in tasks %}
                 {% if task.complete == True %}
-                  <span>{{ task }} <i href="{% url 'todo:delete' task.id %}" id="delete" class="fas fa-dumpster-fire text-end"></i></span>
+                  <span>{{ task }} <i id="delete" class="fas fa-dumpster-fire text-end"></i></span>
+
 
                 {% endif %}
               {% endfor %}
