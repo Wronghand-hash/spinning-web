@@ -1,111 +1,19 @@
-body {
-  font-family: 'Roboto Slab', serif;
-  max-width: 100%;
-  position: absolute;
-  background: url("life.png") no-repeat fixed;
-  background-size: 100%;
-}
-
-.container {
-  width: 550px;
+html, body {
+  height: 100%;
   position: relative;
-  left: 0px;
-  margin-top: 20%;
+  transition: .5s;
+  box-sizing: border-box;
+  background: url(bg.jpg) no-repeat center /cover;
 }
 
-.search {
-  animation-name: fadein;
-  -webkit-animation: fadein 4s;
-     -moz-animation: fadein 4s;
-      -ms-animation: fadein 4s;
-       -o-animation: fadein 4s;
-          animation: fadein 4s;
+#navbar {
+  background-color: #6AC7E4;
 }
 
-input[type=text],
-input[type=text]:focus {
-  color: #D03245;
-  border: none;
-  background-color: #D03245;
-  max-width: 600px;
-  padding:20px;
-}
-#todos {
-  background: none;
-  border: none;
-  max-height: 500px;
-  font-size: 25px;
+#card {
+  background-color: #686868;
 }
 
-
-#task{
-  padding:3px 0.5px;
-  font-size: 30px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-#list {
-  animation-name: fadein;
-  -webkit-animation: fadein 5s;
-  -moz-animation: fadein 5s;
-  -ms-animation: fadein 5s;
-  -o-animation: fadein 5s;
-  animation: fadein 5s;
-}
-
-#add {
-  animation-name: fadein linear;
-  -webkit-animation: fadein 6s;
-  -moz-animation: fadein 6s;
-  -ms-animation: fadein 6s;
-  -o-animation: fadein 6s;
-  animation: fadein 6s;
-}
-
-#delete {
-  font-size: 20px;
-  align-items: flex-end;
-  float: right;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-#task span {
-  color: #d6d6d6;
-  border-bottom: 1px solid #d6d6d6;
-}
-
-#header h1 {
-    color: #d6d6d6;
-    animation-name: fadein;
-    -webkit-animation: fadein 2s;
-       -moz-animation: fadein 2s;
-        -ms-animation: fadein 2s;
-         -o-animation: fadein 2s;
-            animation: fadein 2s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+#card:hover h3{
+  background-color: grey;
 }

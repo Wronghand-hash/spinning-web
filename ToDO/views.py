@@ -10,6 +10,7 @@ from .forms import *
 
 
 def tasks(request):
+    era = Era.objects.all()
     tasks = Task.objects.all()
     form = TaskForm()
 
@@ -20,7 +21,7 @@ def tasks(request):
         return redirect('/todo/')
 
 
-    context = { 'tasks':tasks , 'form':form }
+    context = { 'tasks':tasks , 'form':form, 'era':era }
     return render(request, 'todo/todo.html', context)
 
 def update(request, pk):
