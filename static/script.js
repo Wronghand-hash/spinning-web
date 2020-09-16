@@ -1,6 +1,5 @@
-const body = document.querySelector("body")
-const chimg = document.querySelectorall("#chimg")
-
-chimg.addEventListener("mouseover", () => {
-    body.style.background = `url('frontend.jpg') no-repeat center/cover`
-  });
+let card = document.querySelector("#card");
+console.log(card);
+card.addEventListener('mouseover', () => {
+  document.body.style.backgroundImage = "{% static 'frontend.jpg' %}";
+});

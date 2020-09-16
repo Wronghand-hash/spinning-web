@@ -3,17 +3,58 @@ html, body {
   position: relative;
   transition: .5s;
   box-sizing: border-box;
-  background: url(bg.jpg) no-repeat center /cover;
+  background: linear-gradient(to right, rgb(179, 255, 171), rgb(18, 255, 247));
 }
 
 #navbar {
-  background-color: #6AC7E4;
+  background-color: #171332;
+  transition: linear;
 }
 
-#card {
-  background-color: #686868;
+.shadow {
+  width: 100%;
+  height: 100%;
+  background: grey;
+  opacity: 0.5;
 }
 
-#card:hover h3{
-  background-color: grey;
+.navbar-brand {
+  font-size: 15px;
+  padding: 6px;
+  border-radius: 8px;
+  background: #3a4750;
+  color: #00adb5;
+  transition: ease .5s;
+}
+
+.navbar-brand:hover {
+  color: #303841;
+  font-size: 16px;
+  background: #eeeeee;
+}
+
+img {
+  border: 1px #171332 solid;
+  width: 208px;
+  height: 111px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+img:hover {
+  border: #dfebed;
+}
+
+.card {
+  position: relative;
+  border-radius: 10px;
+  background-color: #171332;
+  color: #eeeeee;
+  transition: ease 0.5s;
+}
+
+.card:hover{
+  background-color: #dfebed;
+  color: #2b4450;
+  transform: scale(1.1);
 }
