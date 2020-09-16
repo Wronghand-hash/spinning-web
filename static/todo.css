@@ -1,9 +1,10 @@
 html, body {
   height: 100%;
+  font-family: 'Josefin Sans', sans-serif;
   position: relative;
   transition: .5s;
   box-sizing: border-box;
-  background: linear-gradient(to right, rgb(179, 255, 171), rgb(18, 255, 247));
+  background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
 }
 
 #navbar {
@@ -20,10 +21,10 @@ html, body {
 
 .navbar-brand {
   font-size: 15px;
-  padding: 6px;
-  border-radius: 8px;
-  background: #3a4750;
-  color: #00adb5;
+  padding: 8px;
+  border-radius: 20px;
+  background: #fc5185;
+  color: #f0f0f0;
   transition: ease .5s;
 }
 
@@ -35,13 +36,11 @@ html, body {
 
 img {
   border: 1px #171332 solid;
-  width: 208px;
-  height: 111px;
   border-radius: 10px;
   z-index: 1;
 }
 
-img:hover {
+.card:hover img {
   border: #dfebed;
 }
 
@@ -57,4 +56,20 @@ img:hover {
   background-color: #dfebed;
   color: #2b4450;
   transform: scale(1.1);
+}
+
+.card:hover a{
+  background: #43dde6;
+  color: #364f6b
+}
+
+.card-footer a {
+  margin: auto 6px;
+  text-decoration: none;
+  text-decoration-style: none;
+  background: #fc5185;
+  color: #f0f0f0;
+  border-radius: 20px;
+  padding: 5px;
+  box-sizing: border-box;
 }
