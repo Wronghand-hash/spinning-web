@@ -42,6 +42,12 @@ def create_task(request):
     task = Task.objects.all()
     form = TaskForm()
 
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+            
     context = {'form':form, 'task':task}
     return render(request, 'todo/create.html', context)
 

@@ -1,21 +1,38 @@
 <!DOCTYPE html>
+{% load widget_tweaks %}
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'todo-create.css' %}">
     <title></title>
   </head>
   <body>
-    <div class="jumbotron text-center bg-info">
-      <div class="container">
 
+    <div id="navbar" class="navbar">
+      <a class="navbar-brand" href="{% url 'homepage' %}">HomePage</a>
+      <a class="navbar-brand text-right" href="#">About</a>
+    </div>
+      <div class="container">
       <form class="form"  placeholder="whats your next move ..." method="post" action="/todo/">
-        {% csrf_token %}
-        {{form.title}}
-        {{form.description}}
-        <input class="create_tasks" type="submit" name="create tasks">
+        <div id="card" class="card">
+          <h1 class="card-header text-light my-20">write something cool about orginazing</h1>
+          <div class="card-body">
+            {% csrf_token %}
+              {% render_field form.era class="form-data text-center" placeholder="Era" %}
+              <p>{% render_field form.title class="form-data" placeholder="Title.." %}</p>
+            <p>{% render_field form.description rows="8" class="form-data description" placeholder="description . . ." %}</p>
+          <button class="create-tasks" type="submit" name="button">Enter</button>
+          </div>
       </form>
     </div>
-  </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
   </body>
 </html>

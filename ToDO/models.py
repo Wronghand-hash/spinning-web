@@ -10,7 +10,7 @@ class Era(models.Model):
 
 
 class Task(models.Model):
-    era = models.ForeignKey(Era ,on_delete=models.CASCADE, null=True)
+    era = models.ForeignKey(Era ,on_delete=models.CASCADE, null=False)
     title = models.CharField(max_length=200)
     description = models.TextField(blank=False, help_text="description . . . ")
     complete = models.BooleanField(default=False)

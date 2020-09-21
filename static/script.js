@@ -1,3 +1,6 @@
-let cards = document.querySelectorAll('.col-lg')
+let body = document.querySelector('body');
+let card = document.getElementById('card');
 
-console.log(cards)
+card.onclick=function(){
+  body.style.color='white'
+};

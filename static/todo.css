@@ -4,7 +4,13 @@ html, body {
   position: relative;
   transition: .5s;
   box-sizing: border-box;
-  background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
+  background: linear-gradient(to right, rgb(3, 0, 30), rgb(115, 3, 192), rgb(236, 56, 188), rgb(253, 239, 249));
+}
+
+@keyframes change {
+  0%{background-position: 0% 50%}
+  50%{background-position: 100% 50%}
+  100%{background-position: 0% 50%}
 }
 
 #navbar {
@@ -34,7 +40,7 @@ html, body {
   background: #eeeeee;
 }
 
-img {
+.img-fluid {
   border: 1px #171332 solid;
   border-radius: 10px;
   z-index: 1;
@@ -70,6 +76,6 @@ img {
   background: #fc5185;
   color: #f0f0f0;
   border-radius: 20px;
-  padding: 5px;
+  padding: 2px;
   box-sizing: border-box;
 }
