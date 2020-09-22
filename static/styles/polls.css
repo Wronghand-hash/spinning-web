@@ -1,5 +1,5 @@
 .page {
-  background: lightgreen url("riddler.jpg") no-repeat fixed left;
+  background: lightgreen url('img/riddler.jpg') no-repeat fixed left;
   background-size: 100%;
 }
 
